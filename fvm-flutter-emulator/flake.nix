@@ -23,18 +23,20 @@
         androidEnv = pkgs.androidenv.override { licenseAccepted = true; };
         androidComposition = androidEnv.composeAndroidPackages {
           cmdLineToolsVersion = "8.0";
-          platformToolsVersion = "34.0.5";
+          platformToolsVersion = "36.0.0";
           buildToolsVersions = [
-            "34.0.0"
             "35.0.0"
           ];
           platformVersions = [
             "34"
+            "35"
             "36"
           ];
           abiVersions = [ "x86_64" ];
           includeNDK = true;
-          ndkVersions = [ "27.0.12077973" ];
+          ndkVersions = [
+            "27.0.12077973"
+          ];
           includeCmake = true;
           includeSystemImages = true;
           systemImageTypes = [
@@ -63,7 +65,7 @@
             ANDROID_HOME = "${androidSdk}/libexec/android-sdk";
             ANDROID_SDK_ROOT = "${androidSdk}/libexec/android-sdk";
             JAVA_HOME = jdk17.home;
-            GRADLE_OPTS = "-Dorg.gradle.project.android.aapt2FromMavenOverride=${androidSdk}/libexec/android-sdk/build-tools/34.0.0/aapt2";
+            GRADLE_OPTS = "-Dorg.gradle.project.android.aapt2FromMavenOverride=${androidSdk}/libexec/android-sdk/build-tools/35.0.0/aapt2";
             QT_QPA_PLATFORM = "wayland;xcb";
             buildInputs = [
               androidSdk
