@@ -24,7 +24,7 @@ jobs:
       - name: Generate flakes.json
         run: |
           flakes=()
-          repo="https://github.com/SaladinAyyub/flake-store-flakes/tree/main"
+          repo="${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/tree/${GITHUB_REF_NAME}"
           for dir in */; do
             if [[ -f "$dir/flake.nix" ]]; then
               name=$(basename "$dir")
@@ -43,4 +43,3 @@ jobs:
           git add flakes.json
           git commit -m "Update flakes.json" || echo "No changes"
           git push
-
