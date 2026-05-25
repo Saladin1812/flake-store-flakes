@@ -2,7 +2,7 @@
   {
     "name": "bevy-rust",
     "description": "bevy flake",
-    "repo_url": "https://github.com/SaladinAyyub/flake-store-flakes/tree/main/bevy-rust"
+    "repo_url": "https://github.com/Saladin1812/flake-store-flakes/tree/main/bevy-rust"
   },
   {
     "name": "fvm-flutter-emulator",
